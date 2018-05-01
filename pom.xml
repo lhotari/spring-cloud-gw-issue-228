@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.0.RELEASE</version>
+		<version>2.0.2.BUILD-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -16,10 +16,29 @@
 
 	<packaging>pom</packaging>
 
-	<modules>		
+	<modules>
 		<module>gateway</module>
-		<module>apigw-test-ms</module>		
+		<module>apigw-test-ms</module>
 		<module>test-driver</module>
 	</modules>
+
+	<repositories>
+   		 <repository>
+                        <id>spring-milestones</id>
+                        <name>Spring Milestones</name>
+                        <url>https://repo.spring.io/milestone</url>
+                        <snapshots>
+                                <enabled>false</enabled>
+                        </snapshots>
+                </repository>
+		<repository>
+		        <id>spring-snapshots</id>
+		        <name>Spring Snapshots</name>
+		        <url>https://repo.spring.io/libs-snapshot</url>
+		        <snapshots>
+	   	            <enabled>true</enabled>
+		        </snapshots>
+	       </repository>
+	</repositories>
 
 </project>
